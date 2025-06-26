@@ -54,8 +54,21 @@ install_pkgs() {
         fi
     done
     
-    echo "Installing/Updating Python pip..."
-    pip install --upgrade pip
+    echo "Updating package lists and upgrading all packages..."
+    pkg update -y && pkg upgrade -y # এই কমান্ডটিই python এবং pip আপগ্রেড করবে
+
+    pkgs=(python mpv aria2 ffmpeg git)
+    for pkg in "${pkgs[@]}"; do
+        if command -v $pkg >/dev/null 2>&1; then
+            echo "$pkg is already installed."
+        else
+            echo "Installing $pkg..."
+            pkg install $pkg -y
+        fi
+    done
+
+    # pip install --upgrade pip লাইনটি এখান থেকে সরিয়ে দেওয়া হয়েছে।
+    # এটি অপ্রয়োজনীয় এবং ক্ষতিকর।
 
     echo "Installing/Updating yt-dlp..."
     pip install --upgrade yt-dlp
