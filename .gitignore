@@ -1,0 +1,8 @@
+# Backup files created by the script
+*.bak
+
+# yt-dlp's download history/archive file
+downloaded.txt
+
+# Python compiled file cache
+__pycache__/
