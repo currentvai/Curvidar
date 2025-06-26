@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# YouTube URL from the share menu
+url="$1"
+
+# Download directory
+ytdir="$HOME/storage/shared/YouTube"
+
+# Make sure the directory exists
+mkdir -p "$ytdir"
+
+# Function to display the menu
+show_menu() {
+    clear
+    echo -e "\e[1;36m--- Curvidar: YouTube Downloader ---\e[0m"
+    echo -e "\e[1;33mURL: $url\e[0m\n"
+    echo -e "\e[1;32m[1] Download Video - 1080p (Best Quality)\e[0m"
+    echo -e "\e[1;32m[2] Download Video - 720p (Good Quality)\e[0m"
+    echo -e "\e[1;32m[3] Download Video - 480p (Standard)\e[0m"
+    echo "-------------------------------------"
+    echo -e "\e[1;34m[4] Download Audio Only (m4a - best audio)\e[0m"
+    echo -e "\e[1;34m[5] Download Audio Only (mp3 - compatible)\e[0m"
+    echo "-------------------------------------"
+    echo -e "\e[1;35m[p] Play with MPV (No Download)\e[0m"
+    echo -e "\e[1;31m[q] Quit / Cancel\e[0m"
+}
+
+# Show the menu and get user choice
+show_menu
+read -p $'\n\e[1;37mEnter your choice: \e[0m' choice
+
+# Go to the download directory
+cd "$ytdir"
+
+# Process the choice
+case $choice in
+    1)
+        echo "Downloading 1080p video..."
+        yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best' "$url"
+        ;;
+    2)
+        echo "Downloading 720p video..."
+        yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' "$url"
+        ;;
+    3)
+        echo "Downloading 480p video..."
+        yt-dlp -f 'bestvideo[height<=480]+bestaudio/best' "$url"
+        ;;
+    4)
+        echo "Downloading best quality audio (m4a)..."
+        yt-dlp -f 'bestaudio[ext=m4a]' "$url"
+        ;;
+    5)
+        echo "Downloading mp3 audio..."
+        yt-dlp -x --audio-format mp3 "$url"
+        ;;
+    p|P)
+        echo "Starting MPV player..."
+        mpv "$url"
+        ;;
+    q|Q)
+        echo "Operation cancelled."
+        exit 0
+        ;;
+    *)
+        echo "Invalid choice. Exiting."
+        exit 1
+        ;;
+esac
+
+echo -e "\n\e[1;32m✅ Task Finished. Check your 'YouTube' folder.\e[0m"
+read -p "Press Enter to exit."
