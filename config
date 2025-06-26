@@ -1,0 +1,25 @@
+# Configuration for yt-dlp used by Curvidar
+
+# Output template for filenames: Uploader - Title [ID].ext
+-o "%(uploader)s - %(title)s [%(id)s].%(ext)s"
+
+# Use aria2c for faster downloads (16 connections)
+--downloader aria2c
+--downloader-args "aria2c:-x 16 -s 16 -k 1M"
+
+# Embed metadata and thumbnail into the file
+--embed-metadata
+--embed-thumbnail
+
+# Set best audio quality for extraction
+--audio-quality 0
+
+# Download subtitles if available (English and Bengali)
+--write-subs
+--sub-langs "en.*,bn.*"
+
+# Use an archive file to avoid re-downloading videos
+--download-archive "$HOME/.config/yt-dlp/downloaded.txt"
+
+# Ignore errors in playlists
+--ignore-errors
