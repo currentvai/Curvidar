@@ -2,6 +2,12 @@
 A simple one-command script to set up Termux for easy YouTube video/audio downloads via the share menu.
 # Curvidar: Termux YouTube Downloader
 
+#logo option# 
+
+<p align="center">
+  <img src="assets/logo.png" alt="Curtroder Logo" width="300"/>
+</p>
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Works On](https://img.shields.io/badge/works%20on-Termux-green)
 [![Author](https://img.shields.io/badge/Author-Current%20Vai%20%E2%99%9A-blue)](https://github.com/currentvai)
@@ -24,6 +30,7 @@ Just copy and paste this single command into your Termux terminal. It will autom
 
 ```bash
 pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://github.com/currentvai/Curvidar.git && cd Curvidar && chmod +x setup.sh && ./setup.sh
+```
 
 This command will handle everything from cloning the repository to setting up the tools.
 How to Use
@@ -39,21 +46,26 @@ This tool is for personal and educational use only. Please respect the copyright
 License
 This project is licensed under the MIT License.
 
-**Developed by Current Vai ♚.**
+## 🛠️ Developer Info
 
-Copyright (c) 2024 Current Vai ♚
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**Developed with ❤️ by [Current Vai ♚](https://github.com/currentvai)**  
+📬 Contact: [@CurrentVai on Telegram](https://t.me/currentVai)
+
+---**© Copyright 2025 — All Rights Reserved.**
+
+---
+
+## 🌐 Connect
+
+- 💬 Telegram: [@CurrentVai](https://t.me/currentVai)
+- 🐙 GitHub: [Current7777](https://github.com/currentvai)
+
+---
+
+## 📢 License
+
+This project is licensed under the **MIT License**.
+
+If you want to give me any advice, feel free to contact me.👇👇👇
+
+Telegram: [@CurrentVai](https://t.me/currentvai) 
