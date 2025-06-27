@@ -106,13 +106,6 @@ All videos will be saved in the:
 Internal Storage > Youtube
 ```
 
-
-
-
-
-
-
-
 This command will handle everything from cloning the repository to setting up the tools.
 How to Use
 After the setup is complete, follow these simple steps:
