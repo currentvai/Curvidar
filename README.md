@@ -24,12 +24,57 @@ This script installs all necessary tools like `yt-dlp`, `ffmpeg`, and `aria2c`, 
 -   🖼️ **Metadata & Thumbnails**: Automatically embeds metadata and thumbnails.
 -   📁 **Organized**: All downloads are saved to the `storage/shared/YouTube` folder.
 
+🔧 Curvidar Setup Guide (For Termux Users)
+
 ## Installation
+📌 Step 1: Update & Upgrade Packages
+```bash
+pkg update -y && pkg upgrade -y
+```
 
-Just copy and paste this single command into your Termux terminal. It will automatically download the repository and run the setup script.
+✅ This updates all your existing Termux packages to the latest version.
 
+📌 Step 2: Install Git
+```bash
+pkg install git -y
+```
+
+✅ Installs Git, which is required to clone the repository.
+
+📌 Step 3: Clone the Curvidar Repository
+```bash
+git clone https://github.com/currentvai/Curvidar.git
+```
+
+✅ Downloads the Curvidar project from GitHub.
+
+📌 Step 4: Enter the Project Directory
+```bash
+cd Curvidar
+```
+
+✅ Moves into the Curvidar folder.
+
+📌 Step 5: Make the Setup Script Executable
+```bash
+chmod +x setup.sh
+```
+
+✅ Grants permission to run the setup script.
+
+📌 Step 6: Run the Setup Script
+```bash
+./setup.sh
+```
+
+✅ Starts the automatic installation and configuration.
+
+✅ One-Line Command (All Steps Together)
+
+If you want to run everything at once, just use this:
 ```bash
 pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://github.com/currentvai/Curvidar.git && cd Curvidar && chmod +x setup.sh && ./setup.sh
+
 ```
 
 This command will handle everything from cloning the repository to setting up the tools.
