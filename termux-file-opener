@@ -6,6 +6,9 @@ url="$1"
 # Download directory
 ytdir="$HOME/storage/shared/YouTube"
 
+# Output filename template (limits title to 200 characters)
+output_template="%(title).200s.%(ext)s"
+
 # Make sure the directory exists
 mkdir -p "$ytdir"
 
@@ -36,23 +39,28 @@ cd "$ytdir"
 case $choice in
     1)
         echo "Downloading 1080p video..."
-        yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best' "$url"
+        # FIX: Added -o flag to limit filename length
+        yt-dlp -f 'bestvideo[height<=1080]+bestaudio/best' -o "$output_template" "$url"
         ;;
     2)
         echo "Downloading 720p video..."
-        yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' "$url"
+        # FIX: Added -o flag
+        yt-dlp -f 'bestvideo[height<=720]+bestaudio/best' -o "$output_template" "$url"
         ;;
     3)
         echo "Downloading 480p video..."
-        yt-dlp -f 'bestvideo[height<=480]+bestaudio/best' "$url"
+        # FIX: Added -o flag
+        yt-dlp -f 'bestvideo[height<=480]+bestaudio/best' -o "$output_template" "$url"
         ;;
     4)
         echo "Downloading best quality audio (m4a)..."
-        yt-dlp -f 'bestaudio[ext=m4a]' "$url"
+        # FIX: Added -o flag
+        yt-dlp -f 'bestaudio[ext=m4a]' -o "$output_template" "$url"
         ;;
     5)
         echo "Downloading mp3 audio..."
-        yt-dlp -x --audio-format mp3 "$url"
+        # FIX: Added -o flag
+        yt-dlp -x --audio-format mp3 -o "$output_template" "$url"
         ;;
     p|P)
         echo "Starting MPV player..."
