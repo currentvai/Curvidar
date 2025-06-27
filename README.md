@@ -78,6 +78,7 @@ pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://githu
 ✅ After Successful Installation
 You’re all set! 
 
+---
 
 Now you can **download any video easily** in just a few steps.
 
@@ -89,6 +90,8 @@ Tap on **App Info.**
 Go to **Display over other apps.**
 **Enable** the toggle.
 
+---
+
 🔓 This allows Termux to appear as an option when sharing videos.
 
 **🎬 How to Download a Video**
@@ -99,6 +102,7 @@ From the list, choose **Termux.**
 Select your preferred **video quality.** (e.g., 1/2/etc.)
 The download will begin automatically.
 
+---
 
 **📁 Where to Find the Downloaded Video?**
 All videos will be saved in the:
@@ -106,12 +110,15 @@ All videos will be saved in the:
 Internal Storage > Youtube
 ```
 
+---
+
 ⚠️ Disclaimer
 This tool is intended for personal and educational use only.
 Please respect the copyrights of content creators.
 
 ❗ The developer is not responsible for any misuse of this script.
 
+---
 
 ## 🛠️ Developer Info
 
