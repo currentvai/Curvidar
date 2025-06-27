@@ -74,8 +74,42 @@ chmod +x setup.sh
 If you want to run everything at once, just use this:
 ```bash
 pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://github.com/currentvai/Curvidar.git && cd Curvidar && chmod +x setup.sh && ./setup.sh
-
 ```
+
+✅ After Successful Installation
+You’re all set! Now you can **download any video easily** in just a few steps.
+
+**⚙️ One-Time Setup (Required)**
+To enable the floating download feature:
+
+**Long-press** the **Termux** app icon.
+Tap on **App Info.**
+Go to **Display over other apps.**
+**Enable** the toggle.
+
+🔓 This allows Termux to appear as an option when sharing videos.
+
+**🎬 How to Download a Video**
+Open your desired video (e.g., on YouTube, Facebook, etc.).
+
+Tap the **Share** button.
+From the list, choose **Termux.**
+Select your preferred **video quality.** (e.g., 1/2/etc.)
+The download will begin automatically.
+
+**📁 Where to Find the Downloaded Video?**
+All videos will be saved in the:
+
+```pgsql
+Internal Storage > Youtube
+```
+
+
+
+
+
+
+
 
 This command will handle everything from cloning the repository to setting up the tools.
 How to Use
