@@ -78,6 +78,7 @@ pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://githu
 ✅ After Successful Installation
 You’re all set! 
 
+
 Now you can **download any video easily** in just a few steps.
 
 **⚙️ One-Time Setup (Required)**
@@ -98,9 +99,9 @@ From the list, choose **Termux.**
 Select your preferred **video quality.** (e.g., 1/2/etc.)
 The download will begin automatically.
 
+
 **📁 Where to Find the Downloaded Video?**
 All videos will be saved in the:
-
 ```pgsql
 Internal Storage > Youtube
 ```
