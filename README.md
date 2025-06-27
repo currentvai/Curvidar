@@ -121,12 +121,12 @@ Internal Storage > Youtube
 
 ---
 
-**⚠️ Disclaimer
-This tool is intended for personal and educational use only.
+⚠️ **Disclaimer
+This tool is intended for personal and educational use only.**
 
-Please respect the copyrights of content creators.
+**Please respect the copyrights of content creators.**
 
-❗ The developer is not responsible for any misuse of this script.**
+❗ **The developer is not responsible for any misuse of this script.**
 
 ---
 
