@@ -106,19 +106,12 @@ All videos will be saved in the:
 Internal Storage > Youtube
 ```
 
-This command will handle everything from cloning the repository to setting up the tools.
-How to Use
-After the setup is complete, follow these simple steps:
-Open the YouTube app.
-Find the video you want to download.
-Tap the Share button.
-From the app list, select Termux.
-An interactive menu will appear in Termux. Choose your desired format.
-The download will start automatically in your storage/shared/YouTube folder.
-Disclaimer
-This tool is for personal and educational use only. Please respect the copyright of content creators. The developer is not responsible for any misuse of this script.
-License
-This project is licensed under the MIT License.
+⚠️ Disclaimer
+This tool is intended for personal and educational use only.
+Please respect the copyrights of content creators.
+
+❗ The developer is not responsible for any misuse of this script.
+
 
 ## 🛠️ Developer Info
 
