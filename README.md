@@ -76,6 +76,7 @@ If you want to run everything at once, just use this:
 pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://github.com/currentvai/Curvidar.git && cd Curvidar && chmod +x setup.sh && ./setup.sh
 ```
 
+
 ✅ After Successful Installation
 You’re all set! Now you can **download any video easily** in just a few steps.
 
