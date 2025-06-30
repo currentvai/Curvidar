@@ -1,11 +1,9 @@
 # Curvidar
 A simple one-command script to set up Termux for easy YouTube video/audio downloads via the share menu.
-# Curvidar: Termux YouTube Downloader
-
-#logo option# 
+# Curvidar: Termux YouTube Downloader 
 
 <p align="center">
-  <img src="assets/logo.png" alt="Curtroder Logo" width="300"/>
+  <img src="https://github.com/currentvai/Curvidar/blob/main/assets/image/logo.png" alt="Curtroder Logo" width="300"/>
 </p>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
