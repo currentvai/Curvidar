@@ -74,7 +74,6 @@ chmod +x bin/termux-url-opener
 
 ```
 
-
 ✅ Starts the automatic installation and configuration.
 
 ✅ One-Line Command (All Steps Together)
@@ -85,6 +84,13 @@ pkg update -y && pkg upgrade -y && pkg install git -y && git clone https://githu
 ```
 ✅ After Successful Installation
 You’re all set! 
+
+---
+🔄 One-Click Update Command
+
+To update the Curvidar tool to the latest version, just run the following command in Termux or Linux:
+
+cd $HOME/Curvidar && git pull && chmod +x *.sh && echo "✅ Curvidar Update!"
 
 ---
 
