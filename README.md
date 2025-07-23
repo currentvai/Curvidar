@@ -90,8 +90,9 @@ You’re all set!
 
 To update the Curvidar tool to the latest version, just run the following command in Termux or Linux:
 
+```bash
 cd $HOME/Curvidar && git pull && chmod +x *.sh && echo "✅ Curvidar Update!"
-
+```
 ---
 
 Now you can **download any video easily** in just a few steps.
