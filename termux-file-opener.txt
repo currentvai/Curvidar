@@ -1,0 +1,105 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# --- Script Configuration ---
+# YouTube URL from the share menu
+url="$1"
+
+# Download directory in shared storage
+ytdir="$HOME/storage/shared/YouTube"
+
+# Output filename template: Limits title to a safe length (e.g., 180 chars)
+output_template="%(title).180s.%(ext)s"
+
+# Ensure the download directory exists
+mkdir -p "$ytdir"
+
+# --- Banner Function ---
+# This banner will be shown every time the screen is cleared.
+display_banner() {
+    # ASCII Art Banner
+    echo -e "\e[1;36m"
+    echo ' ██████ ██    ██ ██████  ██    ██ ██ ██████   █████  ██████  '
+    echo '██      ██    ██ ██   ██ ██    ██ ██ ██   ██ ██   ██ ██   ██ '
+    echo '██      ██    ██ ██████  ██    ██ ██ ██   ██ ███████ ██████  '
+    echo '██      ██    ██ ██   ██  ██  ██  ██ ██   ██ ██   ██ ██   ██ '
+    echo ' ██████  ██████  ██   ██   ████   ██ ██████  ██   ██ ██   ██ '
+    echo -e "\e[0m"
+
+    # Developer and Dynamic Info
+    echo -e "\e[1;34mDeveloped By Current Vai ♚ | Curvidar v1.1\e[0m"
+    echo -e "\e[1;33m© Copyright $(date +%Y) — All Rights Reserved.\e[0m"
+    echo -e "\e[1;31m\"I am completely destroyed. Error 304 Not Modified.\"\e[0m"
+    echo -e "\n\e[91m📅 $(date +"%A, %d %B %Y") | ⏰ $(date +"%I:%M %p")\e[0m"
+
+}
+
+# --- Custom Clear Command ---
+# Redefine 'clear' to always show the banner after clearing.
+clear() {
+    /data/data/com.termux/files/usr/bin/clear
+    display_banner
+}
+
+# --- Main Menu Function ---
+show_menu() {
+    clear # This will now call our custom clear function
+    echo -e "\e[1;36m--- Curvidar: YouTube Downloader ---\e[0m"
+    echo -e "\e[1;33mURL: \e[0;33m$url\e[0m\n" # Made URL non-bold for readability
+    echo -e "\e[1;32m[1] Download Video - 1080p (Best Quality)\e[0m"
+    echo -e "\e[1;32m[2] Download Video - 720p (Good Quality)\e[0m"
+    echo -e "\e[1;32m[3] Download Video - 480p (Standard)\e[0m"
+    echo "-------------------------------------"
+    echo -e "\e[1;34m[4] Download Audio Only (m4a - best audio)\e[0m"
+    echo -e "\e[1;34m[5] Download Audio Only (mp3 - compatible)\e[0m"
+    echo "-------------------------------------"
+    echo -e "\e[1;35m[p] Play with MPV (No Download)\e[0m"
+    echo -e "\e[1;31m[q] Quit / Cancel\e[0m"
+}
+
+# --- Script Execution ---
+
+# Show the menu and get user's choice
+show_menu
+read -p $'\n\e[1;37mEnter your choice: \e[0m' choice
+
+# Go to the download directory before starting the download
+cd "$ytdir"
+
+# Process the user's choice
+case $choice in
+    1)
+        echo "Downloading 1080p video..."
+        yt-dlp --restrict-filenames -f 'bestvideo[height<=1080]+bestaudio/best' -o "$output_template" "$url"
+        ;;
+    2)
+        echo "Downloading 720p video..."
+        yt-dlp --restrict-filenames -f 'bestvideo[height<=720]+bestaudio/best' -o "$output_template" "$url"
+        ;;
+    3)
+        echo "Downloading 480p video..."
+        yt-dlp --restrict-filenames -f 'bestvideo[height<=480]+bestaudio/best' -o "$output_template" "$url"
+        ;;
+    4)
+        echo "Downloading best quality audio (m4a)..."
+        yt-dlp --restrict-filenames -f 'bestaudio[ext=m4a]' -o "$output_template" "$url"
+        ;;
+    5)
+        echo "Downloading mp3 audio..."
+        yt-dlp --restrict-filenames -x --audio-format mp3 -o "$output_template" "$url"
+        ;;
+    p|P)
+        echo "Starting MPV player..."
+        mpv "$url"
+        ;;
+    q|Q)
+        echo "Operation cancelled."
+        exit 0
+        ;;
+    *)
+        echo "Invalid choice. Exiting."
+        exit 1
+        ;;
+esac
+
+echo -e "\n\e[1;32m✅ Task Finished. Check your 'YouTube' folder.\e[0m"
+read -p "Press Enter to exit."
