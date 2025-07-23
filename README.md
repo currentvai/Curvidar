@@ -65,6 +65,16 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
+Now change the opener path 
+```bash
+cd ~
+mkdir -p bin
+mv Curvidar/termux-file-opener.txt bin/termux-url-opener
+chmod +x bin/termux-url-opener
+
+```
+
+
 ✅ Starts the automatic installation and configuration.
 
 ✅ One-Line Command (All Steps Together)
